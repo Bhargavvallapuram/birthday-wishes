@@ -103,3 +103,159 @@ button.say:active {
   font-family: monospace;
 
 }
+
+/* Mobile-Friendly Styles */
+@media (max-width: 1200px) {
+  #wrap {
+    width: 90%;
+    height: auto;
+  }
+  
+  #canvas {
+    width: 100%;
+    height: auto;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+  
+  #wrap {
+    width: 95%;
+    height: auto;
+    margin-top: 5px;
+  }
+  
+  #text {
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 20px 0;
+    padding: 0 15px;
+  }
+  
+  #canvas {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin: 20px auto;
+  }
+  
+  #code {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 20px;
+  }
+  
+  #clock-box {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  
+  #clock .digit {
+    font-size: 48px;
+  }
+  
+  #clock-box a {
+    font-size: 20px;
+  }
+  
+  #clock {
+    margin-left: 0;
+    text-align: center;
+  }
+  
+  #message-box {
+    position: relative;
+    margin-top: 30px;
+    margin-left: 15px;
+    font-size: 18px;
+  }
+  
+  button.say {
+    padding: 14px 28px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+    display: block;
+  }
+  
+  a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 11px;
+  }
+  
+  #wrap {
+    width: 100%;
+    margin: 0;
+  }
+  
+  #text {
+    width: 100%;
+    padding: 0 10px;
+    margin: 15px 0;
+  }
+  
+  #canvas {
+    width: 100%;
+    height: auto;
+    margin: 15px auto;
+  }
+  
+  #code {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 15px;
+  }
+  
+  #clock-box {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  #clock .digit {
+    font-size: 36px;
+  }
+  
+  #clock-box a {
+    font-size: 16px;
+  }
+  
+  #message-box {
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 14px;
+  }
+  
+  button.say {
+    padding: 12px 20px;
+    font-size: 13px;
+    width: 90%;
+    max-width: 280px;
+    margin: 8px auto;
+  }
+  
+  .space {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  a {
+    font-size: 11px;
+  }
+}
