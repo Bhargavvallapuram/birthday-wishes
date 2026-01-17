@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Just One Question ❤️</title>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+  }
+
+  .card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 360px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    z-index: 2;
+  }
+
+  h1 {
+    color: #ff4d6d;
+  }
+
+  p {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+
+  button {
+    padding: 12px 22px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+
+  .yes {
+    background: #ff4d6d;
+    color: white;
+  }
+
+  .no {
+    background: #adb5bd;
+    color: #333;
+    position: fixed;   /* 🔥 KEY CHANGE */
+    z-index: 5;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>Hey 💕</h1>
+  <p>Will you be mine forever? 💖</p>
+
+  <button class="yes" onclick="accept()">Yes 💍</button>
+  <button class="no" id="noBtn" onmouseover="moveNo()">No 🙈</button>
+</div>
+
+<script>
+  function moveNo() {
+    const btn = document.getElementById("noBtn");
+
+    const maxX = window.innerWidth - btn.offsetWidth;
+    const maxY = window.innerHeight - btn.offsetHeight;
+
+    const x = Math.random() * maxX;
+    const y = Math.random() * maxY;
+
+    btn.style.left = x + "px";
+    btn.style.top = y + "px";
+  }
+
+  function accept() {
+    document.body.innerHTML = `
+      <div style="
+        height:100vh;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        background:linear-gradient(135deg,#ff758c,#ff7eb3);
+        color:white;
+        font-family:'Segoe UI',sans-serif;
+      ">
+        <h1>Yesss! 💖</h1>
+        <p style="font-size:20px;">You just made my heart happiest ❤️</p>
+        <div style="font-size:32px;">🥰💍❤️💍🥰</div>
+      </div>
+    `;
+  }
+</script>
+
+</body>
+</html>
