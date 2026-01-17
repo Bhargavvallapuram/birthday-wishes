@@ -17,16 +17,30 @@ a {
 #wrap {
   position: relative;
   margin: 0 auto;
-  width: 1100px;
-  height: 680px;
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
   margin-top: 10px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 #text {
   width: 272px;
-  height: 560px;
-  left: 188px;
-  top: 80px;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   position: absolute;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  #text {
+    width: 90%;
+    max-width: 270px;
+    left: 50%;
+    top: 40%;
+  }
 }
 #code {
   display: none;
@@ -39,10 +53,18 @@ a {
 }
 #clock-box {
   position: absolute;
-  left: 60px;
-  top: 550px;
-  font-size: 28px;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  font-size: 16px;
   display: none;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  #clock-box {
+    font-size: 28px;
+  }
 }
 #clock-box a {
   font-size: 28px;
@@ -71,27 +93,6 @@ a {
 .say {
   margin-left: 5px;
 }
-button.say {
-  background-color: rgb(190, 26, 37);
-  color: white;
-  padding: 12px 24px;
-  border: 2px solid rgb(255, 200, 200);
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-button.say:hover {
-  background-color: rgb(220, 40, 50);
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(190, 26, 37, 0.5);
-}
-button.say:active {
-  transform: scale(0.98);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
 .space {
   margin-right: 150px;
 }
@@ -102,160 +103,4 @@ button.say:active {
   font-size: 25px;
   font-family: monospace;
 
-}
-
-/* Mobile-Friendly Styles */
-@media (max-width: 1200px) {
-  #wrap {
-    width: 90%;
-    height: auto;
-  }
-  
-  #canvas {
-    width: 100%;
-    height: auto;
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    font-size: 12px;
-  }
-  
-  #wrap {
-    width: 95%;
-    height: auto;
-    margin-top: 5px;
-  }
-  
-  #text {
-    width: 100%;
-    height: auto;
-    position: relative;
-    left: 0;
-    top: 0;
-    margin: 20px 0;
-    padding: 0 15px;
-  }
-  
-  #canvas {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    margin: 20px auto;
-  }
-  
-  #code {
-    font-size: 14px;
-    line-height: 20px;
-    margin-top: 20px;
-  }
-  
-  #clock-box {
-    position: relative;
-    left: 0;
-    top: 0;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    font-size: 20px;
-  }
-  
-  #clock .digit {
-    font-size: 48px;
-  }
-  
-  #clock-box a {
-    font-size: 20px;
-  }
-  
-  #clock {
-    margin-left: 0;
-    text-align: center;
-  }
-  
-  #message-box {
-    position: relative;
-    margin-top: 30px;
-    margin-left: 15px;
-    font-size: 18px;
-  }
-  
-  button.say {
-    padding: 14px 28px;
-    font-size: 14px;
-    width: 100%;
-    max-width: 300px;
-    margin: 10px auto;
-    display: block;
-  }
-  
-  a {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    font-size: 11px;
-  }
-  
-  #wrap {
-    width: 100%;
-    margin: 0;
-  }
-  
-  #text {
-    width: 100%;
-    padding: 0 10px;
-    margin: 15px 0;
-  }
-  
-  #canvas {
-    width: 100%;
-    height: auto;
-    margin: 15px auto;
-  }
-  
-  #code {
-    font-size: 12px;
-    line-height: 18px;
-    margin-top: 15px;
-  }
-  
-  #clock-box {
-    font-size: 16px;
-    margin-top: 20px;
-  }
-  
-  #clock .digit {
-    font-size: 36px;
-  }
-  
-  #clock-box a {
-    font-size: 16px;
-  }
-  
-  #message-box {
-    margin-top: 20px;
-    margin-left: 10px;
-    font-size: 14px;
-  }
-  
-  button.say {
-    padding: 12px 20px;
-    font-size: 13px;
-    width: 90%;
-    max-width: 280px;
-    margin: 8px auto;
-  }
-  
-  .space {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-  
-  a {
-    font-size: 11px;
-  }
 }
