@@ -65,6 +65,10 @@ a {
   #clock-box {
     font-size: 28px;
   }
+  .say{
+    position: relative;
+  right: 150px;
+}
 }
 #clock-box a {
   font-size: 28px;
